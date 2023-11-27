@@ -1,5 +1,6 @@
 import subprocess   
 from Text import A    #importing ipddress Text file having A = [ '8.8.8.8', '8.8.8.3', '1.1.1.1', '4.8.8.8', '192.168.29.1', '1.2.3.4'] it can be many
+Down = []
 try:
     for kim in A:
         try:
@@ -7,13 +8,16 @@ try:
             output = subprocess.check_output(command.split())
             print(f'{kim} is up')
         except subprocess.CalledProcessError as e:
+            Down.append(kim)
             print(f'{kim} is Down')
 except Exception as e:
     print(f'An error occurred: {e}')
 finally:
     print('Script run successfully')
+print("################Below Node's are Down#########################")
+print(Down)
 
-########################################################################
+##############################################################################################
 OutPut of above code:
 
 8.8.8.8 is up
@@ -23,5 +27,7 @@ OutPut of above code:
 192.168.29.1 is up
 1.2.3.4 is Down
 Script run successfully
+################Below Node's are Down#########################
+['8.8.8.3', '4.8.8.8', '1.2.3.4']
 
 Process finished with exit code 0
