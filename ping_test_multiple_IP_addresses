@@ -1,7 +1,7 @@
 import subprocess
 Down = []
 try:
-    with open('Text.py') as B:
+    with open('Text.txt') as B:
         A = B.read().splitlines()
     for IP in A:
         try:
