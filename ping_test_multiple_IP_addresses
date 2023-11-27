@@ -32,3 +32,12 @@ Script run successfully
 ['8.8.8.3', '4.8.8.8', '1.2.3.4']
 
 Process finished with exit code 0
+
+
+####################### Text file having below formate of data #############################################
+8.8.8.8
+8.8.8.3
+1.1.1.1
+4.8.8.8
+192.168.29.1
+1.2.3.4
