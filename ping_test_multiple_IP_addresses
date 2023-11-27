@@ -1,0 +1,27 @@
+import subprocess   
+from Text import A    #importing ipddress Text file having A = [ '8.8.8.8', '8.8.8.3', '1.1.1.1', '4.8.8.8', '192.168.29.1', '1.2.3.4'] it can be many
+try:
+    for kim in A:
+        try:
+            command = (f'ping -n 1 {kim}')
+            output = subprocess.check_output(command.split())
+            print(f'{kim} is up')
+        except subprocess.CalledProcessError as e:
+            print(f'{kim} is Down')
+except Exception as e:
+    print(f'An error occurred: {e}')
+finally:
+    print('Script run successfully')
+
+########################################################################
+OutPut of above code:
+
+8.8.8.8 is up
+8.8.8.3 is Down
+1.1.1.1 is up
+4.8.8.8 is Down
+192.168.29.1 is up
+1.2.3.4 is Down
+Script run successfully
+
+Process finished with exit code 0
