@@ -2,14 +2,14 @@ import subprocess
 from Text import A    #importing ipddress Text file having A = [ '8.8.8.8', '8.8.8.3', '1.1.1.1', '4.8.8.8', '192.168.29.1', '1.2.3.4'] it can be many
 Down = []
 try:
-    for kim in A:
+    for IP in A:
         try:
-            command = (f'ping -n 1 {kim}')
+            command = (f'ping -n 1 {IP}')
             output = subprocess.check_output(command.split())
-            print(f'{kim} is up')
+            print(f'{IP} is up')
         except subprocess.CalledProcessError as e:
-            Down.append(kim)
-            print(f'{kim} is Down')
+            Down.append(IP)
+            print(f'{IP} is Down')
 except Exception as e:
     print(f'An error occurred: {e}')
 finally:
