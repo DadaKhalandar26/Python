@@ -1,0 +1,41 @@
+# Strings
+- str.startswith(prefix[, start[, end]]) # Checks if the string starts with a specified prefix.
+- str.endswith(suffix[, start[, end]])   # Checks if the string ends with a specified suffix.
+- str.isalpha()                           # Returns True if all characters in the string are alphabetic.
+- str.isdigit()                           # Returns True if all characters in the string are digits.
+- str.isalnum()                           # Returns True if all characters in the string are alphanumeric.
+- str.islower()                           # Returns True if all alphabetic characters in the string are lowercase.
+- str.isupper()                           # Returns True if all alphabetic characters in the string are uppercase.
+- str.isspace()                           # Returns True if all characters in the string are whitespace.
+- str.isnumeric()                         # Returns True if all characters in the string are numeric.
+- str.isdecimal()                         # Returns True if all characters in the string are decimal.
+- str.find(sub[, start[, end]])           # Returns the lowest index of the substring in the string.
+- str.rfind(sub[, start[, end]])          # Returns the highest index of the substring in the string.
+- str.index(sub[, start[, end]])          # Returns the lowest index of the substring in the string (raises ValueError if not found).
+- str.rindex(sub[, start[, end]])         # Returns the highest index of the substring in the string (raises ValueError if not found).
+- str.count(sub[, start[, end]])          # Returns the number of non-overlapping occurrences of the substring in the string.
+- str.split()                             # Splits the string at whitespaces (or a specified separator) into a list.
+- str.splitlines()                        # Splits the string at line breaks and returns a list of lines.
+- str.upper()                             # Converts all characters in the string to uppercase.
+- str.lower()                             # Converts all characters in the string to lowercase.
+- str.capitalize()                         # Capitalizes the first character of the string.
+- str.title()                             # Converts the first character of each word to uppercase.
+- str.strip([chars])                       # Removes leading and trailing characters (defaults to whitespace).
+- str.lstrip([chars])                      # Removes leading characters (defaults to whitespace).
+- str.rstrip([chars])                      # Removes trailing characters (defaults to whitespace).
+- str.replace(old, new[, count])           # Replaces occurrences of a substring with another string.
+- str.center(width[, fillchar])           # Centers the string within a specified width, filling with a character.
+- str.ljust(width[, fillchar])            # Left-justifies the string within a specified width, filling with a character.
+- str.rjust(width[, fillchar])            # Right-justifies the string within a specified width, filling with a character.
+- str.encode([encoding[, errors]])        # Encodes the string using a specified encoding.
+- str.decode([encoding[, errors]])        # Decodes the string using a specified encoding.
+- str.format(*args, **kwargs)             # Formats the string with specified values.
+- str.format_map(mapping)                  # Formats the string using a specified mapping.
+- str.format(*args, **kwargs)             # Formats the string with specified values.
+- str.translate(table)                     # Translates the characters using a translation table.
+- str.maketrans(x[, y[, z]])               # Creates a translation table for use with translate().
+- str.partition(sep)                       # Splits the string at the first occurrence of a specified separator.
+- str.rpartition(sep)                      # Splits the string at the last occurrence of a specified separator.
+- str.format(*args, **kwargs)             # Formats the string with specified values.
+- str.format_map(mapping)                  # Formats the string using a specified mapping.
+- str.expandtabs(tabsize=8)               # Expands tabs in the string to spaces.
