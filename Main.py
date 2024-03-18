@@ -81,19 +81,20 @@ def money_checker(orders_coffee, total_money):
 
 
 profit = 0
-current_resources = copy.copy(resources)
+current_resources = copy.copy(resources)   # Creating copy of the resources so that we can modify it accordingly
+
+#using whileloop and giving all posible outcomes and results using above created functions
 CoffeeMachine = True
 while CoffeeMachine:
     Ordered_Coffee = input("What would you like? (espresso/latte/cappuccino): ").lower()
-    # Creating copy of the resources so that we can modify it accordingly
 
-    if Ordered_Coffee == "off":
+    if Ordered_Coffee == "off":  # To power off the Machine
         CoffeeMachine = False
         print("Powering off")
         break
-    elif Ordered_Coffee == "report":
+    elif Ordered_Coffee == "report":  # report Gives us the resources currently we have and profit
         report()
-    elif Ordered_Coffee == "espresso" or Ordered_Coffee == "latte" or Ordered_Coffee == "cappuccino":
+    elif Ordered_Coffee == "espresso" or Ordered_Coffee == "latte" or Ordered_Coffee == "cappuccino": # To check and user ordered coffee and process it
         resources = resources_checker(current_resources, Ordered_Coffee)
         if resources == 1:
             continue
@@ -101,5 +102,5 @@ while CoffeeMachine:
         money = money_checker(Ordered_Coffee, Total_Money)
         if money != 0:
             print(f"Here is your {Ordered_Coffee} ☕️. Enjoy!")
-    else:
+    else:                                               # If user has entered any typo this will stop poping up error
         print("Enter the correct details.")
