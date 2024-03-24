@@ -34,6 +34,7 @@ my_turtle = turtle.Turtle()
 
 my_turtle.shape("circle")
 my_turtle.pensize(20)
+my_turtle.hideturtle()
 
 
 y = -100
